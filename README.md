@@ -13,10 +13,13 @@ Mod para **My Summer Car** ([MSCLoader](https://www.nexusmods.com/mysummercar/mo
 
 Languages: English, Português, Español, Suomi, Deutsch, Français, Italiano, Polski, Русский, Українська, Čeština, Türkçe, Svenska, Nederlands, Magyar.
 
+Cada zip já traz o instalador oficial do **MSCLoader v1.4.2** (`MSCLoader.zip`, sem alterações, licença GPL v3 incluída).
+Each zip includes the official **MSCLoader v1.4.2** installer (`MSCLoader.zip`, unmodified, GPL v3 license included).
+
 ## Como usar / How to use
 
-1. Instale o MSCLoader e copie `SatsumaPronto.dll` para a pasta `Mods` do jogo.
-   Install MSCLoader and copy `SatsumaPronto.dll` into the game's `Mods` folder.
+1. Extraia `MSCLoader.zip` fora da pasta do jogo, rode `MSCLInstaller.exe` e copie `SatsumaPronto.dll` para a pasta `Mods` do jogo.
+   Extract `MSCLoader.zip` outside the game folder, run `MSCLInstaller.exe`, then copy `SatsumaPronto.dll` into the game's `Mods` folder.
 2. No **menu principal**: configurações de mods → Satsuma Pronto → botão.
    In the **main menu**: mod settings → Satsuma Pronto → button.
 3. Confirme e clique em **Continue**. / Confirm and click **Continue**.

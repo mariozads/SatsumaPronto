@@ -9,8 +9,11 @@ velas, filtro de óleo, correia, banco traseiro, tanque cheio, pneus novos
 e o estepe do seu lado.
 
 COMO INSTALAR
-1. Instale o MSCLoader:
-   https://www.nexusmods.com/mysummercar/mods/147
+1. Instale o MSCLoader (o instalador oficial v1.4.2 vem junto, no MSCLoader.zip):
+   a. Extraia o MSCLoader.zip numa pasta qualquer, FORA da pasta do jogo.
+   b. Abra o MSCLInstaller.exe.
+   c. Escolha "My Summer Car" > "Install MSCLoader" > pasta de Mods "Game Folder".
+   (Site oficial: https://www.nexusmods.com/mysummercar/mods/147)
 2. Copie o SatsumaPronto.dll para a pasta "Mods" do jogo
    (ex.: ...\steamapps\common\My Summer Car\Mods).
 

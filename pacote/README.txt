@@ -11,8 +11,11 @@ spare wheel next to you.
 The mod text follows your Windows language (15 languages, English fallback).
 
 INSTALL
-1. Install MSCLoader:
-   https://www.nexusmods.com/mysummercar/mods/147
+1. Install MSCLoader (the official v1.4.2 installer is included as MSCLoader.zip):
+   a. Extract MSCLoader.zip anywhere OUTSIDE the game folder.
+   b. Run MSCLInstaller.exe.
+   c. Choose "My Summer Car" > "Install MSCLoader" > Mods folder "Game Folder".
+   (Official site: https://www.nexusmods.com/mysummercar/mods/147)
 2. Copy SatsumaPronto.dll into the game's "Mods" folder
    (e.g. ...\steamapps\common\My Summer Car\Mods).
 
