@@ -29,8 +29,7 @@ The mod backs up your save first (`...\LocalLow\Amistech\My Summer Car\backup_<d
 
 ## O que vem no carro / What the car gets
 
-All stock parts installed and bolted, charged battery with tight terminals, 4 spark plugs, oil filter, alternator belt, rear seat, full fuel tank (36 L), 5 new tires, tight wheel nuts, and the spare wheel placed next to the player. The car keeps the paint color from your save.
-O carro mantém a cor de pintura do seu save.
+All stock parts installed and bolted, charged battery with tight terminals, 4 spark plugs, oil filter, alternator belt, rear seat, full fuel tank (36 L), 5 new tires, tight wheel nuts, and the spare wheel placed next to the player.
 
 ## Como funciona / How it works
 

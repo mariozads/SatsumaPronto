@@ -106,18 +106,6 @@ namespace SatsumaPronto
             return null;
         }
 
-        static bool EhPintura(string chave)
-        {
-            return chave.EndsWith("Color") || chave.EndsWith("PaintType") || chave.EndsWith("Painted");
-        }
-
-        static bool Iguais(byte[] a, byte[] b)
-        {
-            if (a.Length != b.Length) return false;
-            for (int i = 0; i < a.Length; i++) if (a[i] != b[i]) return false;
-            return true;
-        }
-
         static byte[] PegarModelo(List<KeyValuePair<string, byte[]>> modelo, string chave)
         {
             byte[] v = Pegar(modelo, chave);
@@ -211,18 +199,11 @@ namespace SatsumaPronto
             for (int i = 0; i < lista.Count; i++)
                 indice[lista[i].Key] = i;
 
-            var mod = Ler(modelo);
-            // Cor do jogador (a do modelo é vermelha)
-            byte[] corModelo = Pegar(mod, "car body(xxxxx)Color");
-            byte[] cor = Pegar(lista, "car body(xxxxx)Color");
-            byte[] pintura = Pegar(lista, "car body(xxxxx)PaintType");
-
             trocadas = novas = 0;
-            foreach (var e in mod)
+            foreach (var e in Ler(modelo))
             {
                 if (!EhDoCarro(e.Key)) continue;
                 int i;
-                if (EhPintura(e.Key) && indice.ContainsKey(e.Key)) continue;   // mantém a pintura do jogador
                 if (indice.TryGetValue(e.Key, out i))
                 {
                     lista[i] = e;
@@ -237,8 +218,7 @@ namespace SatsumaPronto
             }
 
             // Ajustes ao save modelo: cabos da bateria e banco traseiro estavam soltos,
-            // o tanque tinha ~2 L e o cano de abastecimento estava solto.
-            Definir(lista, "wiring_battery_harness(xxxxx)Installed", Bool(true));
+            // o tanque tinha ~2 L e o cano de abastecimento estava solto.            Definir(lista, "wiring_battery_harness(xxxxx)Installed", Bool(true));
             Definir(lista, "wiring_battery_harness(xxxxx)Bolted", Bool(true));
             Parafusar(lista, "battery_terminal_plus(xxxxx)", "WiringBatteryPlus", 1);
             Parafusar(lista, "battery_terminal_minus(xxxxx)", "WiringBatteryMinus", 1);
@@ -256,16 +236,6 @@ namespace SatsumaPronto
             }
             // O estepe do modelo ficou a 1,4 km de casa: põe ao lado do jogador
             PorPertoDoJogador(lista, "wheel_steel5Transform");
-
-            // Lataria (capô, portas, paralamas, porta-malas...) com a cor da carroceria do jogador
-            if (cor != null && corModelo != null)
-                foreach (var e in mod)
-                {
-                    if (!e.Key.EndsWith("Color") || !Iguais(e.Value, corModelo)) continue;
-                    Definir(lista, e.Key, cor);
-                    if (pintura != null)
-                        Definir(lista, e.Key.Substring(0, e.Key.Length - 5) + "PaintType", pintura);
-                }
 
             return Gravar(lista);
         }
