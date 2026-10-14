@@ -11,7 +11,7 @@ namespace SatsumaPronto
         public override string ID => "SatsumaPronto";
         public override string Name => "Satsuma Pronto";
         public override string Author => "mariozads";
-        public override string Version => "1.4";
+        public override string Version => "1.5";
         public override string Description => Textos.Descricao;
 
         public override void ModSetup()
