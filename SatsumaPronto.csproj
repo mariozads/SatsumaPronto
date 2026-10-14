@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <AssemblyName>SatsumaPronto</AssemblyName>
+    <RootNamespace>SatsumaPronto</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Pasta do jogo: mude aqui ou use  dotnet build -p:MSCDir="..." -->
+    <MSCDir Condition="'$(MSCDir)' == ''">G:\Steam\steamapps\common\My Summer Car</MSCDir>
+    <!-- Versão só em português:  dotnet build -p:SoPT=true -->
+    <DefineConstants Condition="'$(SoPT)' == 'true'">$(DefineConstants);SO_PT</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MSCLoader">
+      <HintPath>$(MSCDir)\mysummercar_Data\Managed\MSCLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(MSCDir)\mysummercar_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SaveModelo\*.txt" LogicalName="SaveModelo.%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <!-- Copia a DLL para a pasta Mods do jogo depois de compilar (desligue com -p:CopiarMods=false) -->
+  <Target Name="CopiarParaMods" AfterTargets="Build" Condition="'$(CopiarMods)' != 'false' And Exists('$(MSCDir)\Mods')">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(MSCDir)\Mods" />
+  </Target>
+
+</Project>

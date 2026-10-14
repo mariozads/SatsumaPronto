@@ -1,0 +1,26 @@
+SATSUMA PRONTO - mod para My Summer Car
+=======================================
+
+Um botão que monta o Satsuma (stock) no seu save.
+Dinheiro, itens e progresso continuam iguais.
+
+O carro vem com: todas as peças originais apertadas, bateria carregada,
+velas, filtro de óleo, correia, banco traseiro, tanque cheio, pneus novos
+e o estepe do seu lado.
+
+COMO INSTALAR
+1. Instale o MSCLoader:
+   https://www.nexusmods.com/mysummercar/mods/147
+2. Copie o SatsumaPronto.dll para a pasta "Mods" do jogo
+   (ex.: ...\steamapps\common\My Summer Car\Mods).
+
+COMO USAR
+1. Abra o jogo e fique no MENU PRINCIPAL.
+2. Configurações de mods > Satsuma Pronto > "Montar o Satsuma no meu save".
+3. Confirme e clique em CONTINUE.
+
+O mod faz um backup antes, na pasta do save:
+%USERPROFILE%\AppData\LocalLow\Amistech\My Summer Car\backup_<data>
+Para desfazer, copie os arquivos do backup de volta para essa pasta.
+
+Dica: na primeira partida, puxe o afogador (choke) para dar partida.
